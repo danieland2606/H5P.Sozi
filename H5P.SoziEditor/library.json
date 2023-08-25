@@ -1,0 +1,21 @@
+{
+  "title": "Sozi",
+  "description": "Displays a greeting card",
+  "majorVersion": 1,
+  "minorVersion": 0,
+  "patchVersion": 52,
+  "runnable": 1,
+  "author": "Daniel Arnold",
+  "license": "cc-by-sa",
+  "machineName": "H5P.SoziEditor",
+  "coreApi": {
+    "majorVersion": 1,
+    "minorVersion": 0
+  },
+  "preloadedJs": [
+    { "path": "sozi.js" }
+  ],
+  "preloadedCss": [
+    { "path": "sozi.css" }
+  ]
+}
