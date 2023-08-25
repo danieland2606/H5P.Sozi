@@ -46,6 +46,8 @@ H5P.SoziEditor = (function ($) {
 
 
 
+
+
             //let svg_data1 = document.createElement("iframe");
             //svg_data1.className="svg-data";
 
@@ -55,7 +57,6 @@ H5P.SoziEditor = (function ($) {
             //$container.append('<img class="greeting-image" src="earth.jpg">');
 
     };
-
 
 
 
