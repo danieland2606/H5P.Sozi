@@ -32,14 +32,14 @@ H5P.SoziEditor = (function ($) {
         let div = document.createElement("div");
         div.id = "content";
 
-        //let img_data = document.createElement("img");
-        //img_data.className="img-data";
+        let img_data = document.createElement("img");
+        img_data.className="img-data";
 
         //let svg_data = document.createElement("object");
         //svg_data.className="svg-data";
         //svg_data.type= "image/svg+xml";
 
-        //div.append(img_data);
+        div.append(img_data);
         //div.append(svg_data);
         $container.append(div);
 
