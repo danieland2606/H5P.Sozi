@@ -48,6 +48,8 @@ H5P.SoziEditor = (function ($) {
 
 
 
+
+
             //let svg_data1 = document.createElement("iframe");
             //svg_data1.className="svg-data";
 
