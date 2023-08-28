@@ -14,14 +14,19 @@ H5P.SoziEditor = (function ($) {
     };
 
 
+
+    //https://lea.inform.hs-hannover.de/moodle/pluginfile.php/1/mod_hvp/libraries/undefined/projektarbeiten.svg
+    let svg_path = H5P.getLibraryPath(H5P.SoziEditor);
+    svg_path.substring(0, svg_path.lastIndexOf("/"));
+    svg_path.replace('/undefined','');
+    /**
     window.onload = async function () {
         const div = document.getElementById("content");
-        let file = await fetch("../H5P.SoziEditor/projektarbeiten.svg");
+        let file = await fetch(svg_path);
         const text = await file.text();
         div.innerHTML = text;
     }
-
-
+    */
     /**
      * Attach function called by H5P framework to insert H5P content into
      * page
@@ -32,14 +37,25 @@ H5P.SoziEditor = (function ($) {
         let div = document.createElement("div");
         div.id = "content";
 
-        //let img_data = document.createElement("img");
-        //img_data.className="img-data";
+        /**
+        const url = H5P.getPath(this.options.json.path, this.id);
+
+        fetch(url)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            })
+        */
+
+        div.innerHTML += svg_path + "/projektarbeiten.svg";
+        let img_data = document.createElement("img");
+        img_data.className="img-data";
 
         //let svg_data = document.createElement("object");
         //svg_data.className="svg-data";
         //svg_data.type= "image/svg+xml";
 
-        //div.append(img_data);
+        div.append(img_data);
         //div.append(svg_data);
         $container.append(div);
 
