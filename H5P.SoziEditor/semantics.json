@@ -1,9 +1,0 @@
-[
-  {
-    "label": "Json file",
-    "name": "json",
-    "type": "file",
-    "optional": true,
-    "description": "Json-Datei, welche die SVG-Datei editiert und daraus eine Präsentation erstellt."
-  }
-]
