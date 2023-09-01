@@ -42,11 +42,41 @@ H5P.Sozi = (function ($) {
         fetch(json_path)
             .then(res => res.json())
             .then(data => {
-                //console.log(data);
-                console.log(data.frames[0].cameraStates.layer1.cx);
-                //const y= data.frames[0].cameraStates[0];
+                data.frames.forEach((frame) => {
+                    Object.keys(frame.cameraStates).forEach((layer) => {
+                        if (layer !== "__sozi_auto__") {
+                            const name = layer;
+                            const cx = frame.cameraStates[layer].cx;
+                            const cy = frame.cameraStates[layer].cy;
+                            const opacity = frame.cameraStates[layer].opacity;
+                            const width = frame.cameraStates[layer].width;
+                            const height = frame.cameraStates[layer].height;
+                            console.log(name)
+                            console.log(cx);
+                            console.log(cy);
+                            console.log(opacity);
+                            console.log(width);
+                            console.log(height);
+                        }
+                    });
+                });
 
-                //div.innerHTML = x;
+
+
+                /**
+                for (let i=0; i < data.frames.length; i++) {
+                    for(const layer of data.frames[i].cameraStates) {
+                        console.log(layer.cx)
+                        console.log(layer.cy)
+                        console.log(layer.opacity)
+                    }
+
+                    //data.frames[i].cameraStates.layer1.cx;
+                    //data.frames[i].cameraStates.layer1.cy;
+                    //data.frames[i].cameraStates.layer1.opacity;
+                }
+
+            */
             })
 
 
