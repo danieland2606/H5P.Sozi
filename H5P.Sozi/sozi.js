@@ -61,22 +61,6 @@ H5P.Sozi = (function ($) {
                     });
                 });
 
-
-
-                /**
-                for (let i=0; i < data.frames.length; i++) {
-                    for(const layer of data.frames[i].cameraStates) {
-                        console.log(layer.cx)
-                        console.log(layer.cy)
-                        console.log(layer.opacity)
-                    }
-
-                    //data.frames[i].cameraStates.layer1.cx;
-                    //data.frames[i].cameraStates.layer1.cy;
-                    //data.frames[i].cameraStates.layer1.opacity;
-                }
-
-            */
             })
 
 
