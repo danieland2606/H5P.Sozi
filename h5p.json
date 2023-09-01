@@ -9,10 +9,10 @@
     "role":"Author"
   }],
   "preloadedDependencies": [{
-    "machineName": "H5P.SoziEditor",
+    "machineName": "H5P.Sozi",
     "majorVersion": 1,
     "minorVersion": 0
   }],
-  "mainLibrary": "H5P.SoziEditor",
+  "mainLibrary": "H5P.Sozi",
   "embedTypes": ["div"]
 }
