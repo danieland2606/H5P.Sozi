@@ -202,7 +202,7 @@ H5P.Sozi = (function ($) {
         frameDiv.className = "frameClass";
         /**
          * Asynchone Funktion zum Laden der SVG-Datei, sowie die Höhe und Breite der SVG-Datei. Zudem das Laden der
-         * JSON-Datei, sowie das Aufrufen der Funktionen dataforFrame() und framePostion,
+         * JSON-Datei, sowie das Aufrufen der Funktionen dataforFrame() und framePosition,
          */
         window.onload = async function () {
             const file = await fetch(svg_path);
@@ -215,7 +215,7 @@ H5P.Sozi = (function ($) {
 
             dataForFrame();
 
-            frameDiv.innerHTML=framePostion();
+            frameDiv.innerHTML=framePosition();
         }
 
         /**
@@ -229,7 +229,7 @@ H5P.Sozi = (function ($) {
                 frameNr++;
                 dataForFrame();
             }
-            frameDiv.innerHTML=framePostion();
+            frameDiv.innerHTML=framePosition();
         }
 
         /**
@@ -243,7 +243,7 @@ H5P.Sozi = (function ($) {
                 frameNr--;
                 dataForFrame();
             }
-            frameDiv.innerHTML=framePostion();
+            frameDiv.innerHTML=framePosition();
         }
 
         /**
@@ -272,7 +272,7 @@ H5P.Sozi = (function ($) {
                     }
                 })
                 hashFrameID=null;
-                frameDiv.innerHTML=framePostion();
+                frameDiv.innerHTML=framePosition();
             }else{
 
                 const frames = json_data.frames[frameNr];
@@ -329,7 +329,7 @@ H5P.Sozi = (function ($) {
         /**
          * Dieses Methode wird aufgerufen um den aktuellen Frame anzuzeigen.
          */
-        function framePostion() {
+        function framePosition() {
             let currentFrame= frameNr +1;
             return currentFrame + "/" + json_data.frames.length;
         }
