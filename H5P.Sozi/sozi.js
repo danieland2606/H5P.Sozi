@@ -154,7 +154,23 @@ H5P.Sozi = (function ($) {
             if(hashFrameID != null) {
                 let frameFound= false;
                 frameNr= 0;
-                json_data.frames.forEach((frame) => {
+
+                while (frameNr < json_data.frames.length && frameFound==false) {
+                    const frame = json_data.frames[frameNr];
+
+                    if (frame.frameId == hashFrameID) {
+                        getData(frame);
+                        frameFound = true;
+                    }
+
+                    if (!frameFound) {
+                        frameNr++;
+                    }
+
+                }
+
+                /**
+                 json_data.frames.forEach((frame) => {
                     if(frame.frameId == hashFrameID) {
                         getData(frame);
                         frameFound=true;
@@ -163,6 +179,8 @@ H5P.Sozi = (function ($) {
                         frameNr++;
                     }
                 })
+                 */
+
                 hashFrameID=null;
                 frameDiv.innerHTML=framePosition();
             }else{
@@ -191,7 +209,6 @@ H5P.Sozi = (function ($) {
             const height = svg_height / scale / 2;
             const x = width - cx;
             const y = height - cy;
-
 
             const layer = document.getElementById(name);
             const transform = layer.getAttribute("transform");
